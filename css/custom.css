@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+}
+
+#top-container {
+    background-color: #1fd96a;
+    min-height: 800px;
+    padding: 230px 0;
+}
+
+#block {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    background-image: url('../images/lightbulb.png');
+    background-repeat: no-repeat;
+    background-position: 43px;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+}
+
+#block:hover {
+    animation-name: fadeOut;
+    -webkit-animation-name: fadeOut;
+
+}
+.animated {
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: perspective(400px) rotateX(90deg);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: perspective(400px) rotateX(-30deg);
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: perspective(400px) rotateX(90deg);
+    }
+    100% {
+        opacity: 100;
+        -webkit-transform: perspective(400px) rotateX(-30deg);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(-30deg);
+    }
+    100% {
+        opacity: 100%;
+        -webkit-transform: perspective(400px) rotateX(90deg);
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(-30deg);
+    }
+    100% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+    }
+}
